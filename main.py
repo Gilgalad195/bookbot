@@ -13,8 +13,8 @@ def get_book_text (filepath):
      
 
 def main(argv):
-    if len(sys.argv) > 1:
-        filepath = f"{argv[1]}"
+    if len(argv) == 2:
+        filepath = argv[1]
         contents = get_book_text(filepath)
         word_count = get_word_count(contents)
         count_dict = count_characters(contents)
