@@ -23,3 +23,15 @@ def get_sorted_dict(input_dict):
             chars_list.append({"char": char, "count": count})
     chars_list.sort(reverse=True, key=sort_on)
     return chars_list
+
+def print_report(filepath, word_count, sorted_list):
+    print("============ BOOKBOT ============")
+    print(f"Analyzing book found at {filepath}...")
+    print("----------- Word Count ----------")
+    print(f"Found {word_count} total words")
+    print("--------- Character Count -------")
+    for i in sorted_list:
+        char = i["char"]
+        count = i["count"]
+        print(f"{char}: {count}")
+    print("============= END ===============")
