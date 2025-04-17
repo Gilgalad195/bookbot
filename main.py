@@ -22,6 +22,7 @@ def main(argv):
         print_report(filepath, word_count, sorted_list)
     else:
         print ("Usage: python3 main.py <path_to_book>")
+        sys.exit(1)
 
     
 
